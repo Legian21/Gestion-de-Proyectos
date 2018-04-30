@@ -1,3 +1,5 @@
+import { User } from '../../Models/User';
+import { UserService } from '../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ventana-principal.component.css']
 })
 export class VentanaPrincipalComponent implements OnInit {
-
-  constructor() { }
+  private actualUser: User;
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.actualUser = this.userService.user;
+    console.log('Logueado como:', this.actualUser);
   }
-
+  
 }

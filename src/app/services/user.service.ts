@@ -12,7 +12,7 @@ import 'rxjs/add/operator/first';
 import 'rxjs/add/observable/throw';
 @Injectable()
 export class UserService {
-
+  public user: User;
   private static handleError(error: Response | any) {
     // In a real world app, you might use a remote logging infrastructure
     let errMsg: string;
@@ -71,4 +71,5 @@ export class UserService {
         }
       });
   }
+
 }
