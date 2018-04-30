@@ -1,0 +1,68 @@
+
+<!-- <div class="container"> -->
+<!-- 	<div class="jumbotron"> -->
+<!-- 		<h2>Introduce Usuario y contraseña</h2> -->
+<!-- 		<form class="form-control"> -->
+<!-- 			<div> -->
+<!-- 				<label>Usuario:<input [(ngModel)]="username" name="username"></label> -->
+<!-- 			</div> -->
+<!-- 			<div> -->
+<!-- 				<label>Contraseña:<input [(ngModel)]="pass" name="pass"></label> -->
+<!-- 			</div> -->
+<!-- 			<button type="submit" class="btn btn-default btn-lg" -->
+<!-- 				(click)="Validate()">LogIn</button> -->
+<!-- 			<div *ngIf="!result"> -->
+<!-- 				<label class="form-control-plaintext"> Usuario o contraseña -->
+<!-- 					incorrectos</label> -->
+<!-- 			</div> -->
+<!-- 		</form> -->
+
+<!-- 	</div> -->
+<!-- </div> -->
+<div class="full">
+	<div class="row">
+		<div class="Absolute-Center is-Responsive">
+			<div id="logo-container"></div>
+			<div class="col-sm-12 col-md-10 col-md-offset-1">
+				<form id="loginForm">
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-user"></i></span> <input class="form-control"
+							type="text" [(ngModel)]="username" name='username'
+							placeholder="username" />
+					</div>
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-lock"></i></span> <input class="form-control"
+							type="password" [(ngModel)]="pass" name='password'
+							placeholder="password" />
+					</div>
+					<div class="form-group">
+						<button type="button" class="btn btn-primary btn-block"
+							(click)="Validate()">Login</button>
+					</div>
+					<div class="form-group text-center">
+						<a class="help-link" href="#">Forgot Password</a>&nbsp;|&nbsp;<a
+							class="help-link" href="#">Support</a>
+					</div>
+					<div *ngIf="!result">
+						<label class="form-control-plaintext"> Usuario o
+							contraseña incorrectos</label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- <form class="form-inline search-box"> -->
+<!-- 	<div class="form-group form-group-lg"> -->
+<!-- 		<input type="text" class="form-control" [(ngModel)]="searchTerm" -->
+<!-- 			name="searchTerm" placeholder="Buscar películas" /> -->
+<!-- 	</div> -->
+<!-- 	<button type="submit" class="btn btn-default btn-lg" (click)="search()"> -->
+<!-- 		Buscar</button> -->
+<!-- 	<button class="btn btn-default btn-lg" routerLink="/add" -->
+<!-- 		[queryParams]="{title:searchTerm}" [disabled]="!searchTerm">Add</button> -->
+<!-- </form> -->
