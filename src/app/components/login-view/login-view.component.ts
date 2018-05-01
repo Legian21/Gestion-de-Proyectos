@@ -33,6 +33,7 @@ export class LoginViewComponent implements OnInit {
       this.router.navigate(['mainview']);
     }else{
       this.result = false;
+      this.pass = null;
     }
   }
 }

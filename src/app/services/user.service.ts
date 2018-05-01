@@ -40,23 +40,23 @@ export class UserService {
       .catch(UserService.handleError);
   }
 
-  //    createUser(user: User): Observable<User> {
-  //        return this.http.post('/fake-backend/users', user)
-  //            .map(response => response.json() as User)
-  //            .catch(UserService.handleError);
-  //    }
+      createUser(user: User): Observable<User> {
+          return this.http.post('http://localhost:8080/users', user)
+              .map(response => response.json() as User)
+              .catch(UserService.handleError);
+      }
 
-  //    updateUser(user: User): Observable<any> {
-  //        return this.http.put('/fake-backend/users', user)
-  //            .map(response => response.json())
-  //            .catch(UserService.handleError);
-  //    }
+      updateUser(user: User): Observable<any> {
+          return this.http.put('http://localhost:8080/users', user)
+              .map(response => response.json())
+              .catch(UserService.handleError);
+      }
 
-  //    deleteEmployee(id: string): Observable<any> {
-  //        return this.http.delete('/fake-backend/users' + id)
-  //            .map(response => response.json())
-  //            .catch(UserService.handleError);
-  //}
+      deleteUser(id: string): Observable<any> {
+          return this.http.delete('http://localhost:8080/users/' + id)
+              .map(response => response.json())
+              .catch(UserService.handleError);
+  }
 
   getUser(id: string): Observable<User[]> {
 

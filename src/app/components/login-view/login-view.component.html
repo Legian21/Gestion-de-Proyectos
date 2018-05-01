@@ -45,9 +45,9 @@
 						<a class="help-link" href="#">Forgot Password</a>&nbsp;|&nbsp;<a
 							class="help-link" href="#">Support</a>
 					</div>
-					<div *ngIf="!result">
-						<label class="form-control-plaintext"> Usuario o
-							contraseña incorrectos</label>
+					<div class="form-group text-center alert alert-danger" *ngIf="!result">
+						<label> <p class="text-danger">Usuario o
+							contraseña incorrectos</p></label>
 					</div>
 				</form>
 			</div>
